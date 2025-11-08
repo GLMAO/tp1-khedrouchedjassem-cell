@@ -6,19 +6,15 @@ import org.emp.gl.timer.service.TimerChangeListener;
 public class Horloge implements TimerChangeListener {
 
     private String name;
-    public TimerService timerService ;
+    public TimerService timerService;
 
-    public Horloge(String name, TimerService timerService) {
+    public Horloge(String name , TimerService tm) {
         this.name = name;
-        this.timerService = timerService;
-
+        this.timerService = tm;
         // S'inscrire comme observateur
-        this.timerService.addTimeChangeListener(this);
 
         System.out.println("Horloge " + name + " initialized!");
     }
-
-    // Méthode appelée automatiquement chaque dixième de seconde
 
     public void afficherHeure() {
         if (timerService != null)
@@ -26,5 +22,10 @@ public class Horloge implements TimerChangeListener {
                     timerService.getHeures() + ":" +
                     timerService.getMinutes() + ":" +
                     timerService.getSecondes());
+    }
+
+    @Override
+    public void propertyChange(String propertyName, Object oldValue, Object newValue) {
+        afficherHeure();
     }
 }

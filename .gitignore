@@ -1,16 +1,40 @@
-# Compiled class file
+#############################
+# OS / SYSTEM SPECIFIC FILES
+#############################
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+#############################
+# IDE SPECIFIC FILES
+#############################
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code (if used)
+.vscode/
+
+#############################
+# JAVA / MAVEN
+#############################
+
+# Maven target directory (should NEVER be committed)
+target/
+
+# Maven local build artifacts
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -19,6 +43,27 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Maven status & build cache
+**/maven-status/
+**/maven-archiver/
+
+#############################
+# LOGS / TEMP FILES
+#############################
+
+*.log
+logs/
 hs_err_pid*
 replay_pid*
+*.tmp
+*.swp
+
+#############################
+# BLUEJ (if used in school projects)
+#############################
+*.ctxt
+
+#############################
+# J2ME (rare, legacy mobile java)
+#############################
+.mtj.tmp/

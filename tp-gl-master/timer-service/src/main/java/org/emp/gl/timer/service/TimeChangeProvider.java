@@ -9,7 +9,7 @@ package org.emp.gl.timer.service;
  *
  * @author tina
  */
-public interface TimeChangeProvider {
+public interface TimeChangeProvider  {
 
     public void addTimeChangeListener(TimerChangeListener pl);
 
